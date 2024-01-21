@@ -2,7 +2,7 @@
 <p align="center">
 <a href="https://www.chitai-gorod.ru/" target="_blank">
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/%D0%A7%D0%B8%D1%82%D0%B0%D0%B9-%D0%B3%D0%BE%D1%80%D0%BE%D0%B4.jpg" 
-alt="chitai-gorod" width="128" height="64"> </a> 
+alt="chitai-gorod" width="228" height="164"> </a> 
 </p></h1>
 
 ### Список реализованных автотестов
