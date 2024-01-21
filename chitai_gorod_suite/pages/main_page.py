@@ -17,7 +17,7 @@ class MainPage:
         ).click()
 
     def assert_city_changed(self, text):
-        browser.element('.header-city__title').should(
+        browser.element('.change-city__title').should(
             have.text(text)
         )
         return self

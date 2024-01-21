@@ -3,7 +3,7 @@ from chitai_gorod_suite.pages.main_page import MainPage
 
 
 @allure.title('Change city test')
-def test_clear_cart():
+def test_changed_city():
     main_page = MainPage()
 
     with allure.step('Open main page'):
@@ -16,7 +16,8 @@ def test_clear_cart():
         main_page.choose_city('Казань')
 
     with allure.step('Assert city has been changed'):
-        main_page.assert_city_changed('Казань')
+        main_page.change_city()
+        main_page.assert_city_changed('Ваш город — Казань?')
 
 
 
