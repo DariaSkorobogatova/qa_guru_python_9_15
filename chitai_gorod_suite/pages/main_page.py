@@ -1,4 +1,4 @@
-from selene import browser, have
+from selene import browser, have, be
 
 
 class MainPage:
@@ -8,6 +8,7 @@ class MainPage:
 
     def change_city(self):
         browser.element('.header-city__title').click()
+        browser.element('.change-city').should(be.visible).click()
         browser.element('.change-city__button--cancel').click()
         return self
 

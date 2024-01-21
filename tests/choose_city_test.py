@@ -3,7 +3,7 @@ from chitai_gorod_suite.pages.main_page import MainPage
 
 
 @allure.title('Change city test')
-def test_changed_city():
+def test_change_city():
     main_page = MainPage()
 
     with allure.step('Open main page'):
