@@ -57,5 +57,5 @@ alt="chitai-gorod" width="340" height="164"> </a>
 
 ### Настроено автоматическое оповещение о результатах в Telegram
 <p align="center">
-<img src="/images/screenshots/telegram_alert.png" alt="Telegram alert" width="400" height="350">>
+<img src="/images/screenshots/telegram_alert.png" alt="Telegram alert" width="380" height="350">>
 </p>
