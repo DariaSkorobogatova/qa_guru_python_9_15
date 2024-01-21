@@ -18,6 +18,7 @@ def test_clear_cart():
         product.add_to_cart()
 
     with allure.step('Clear the cart'):
+        cart.go_to_cart()
         cart.clear_cart()
 
     with allure.step('Assert cart is empty'):
