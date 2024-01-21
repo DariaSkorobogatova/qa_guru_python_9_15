@@ -1,5 +1,4 @@
-from selene import browser, have
-import time
+from selene import browser, have, be
 
 
 class CartPage:
@@ -15,8 +14,7 @@ class CartPage:
 
     def clear_cart(self):
         browser.element('.header-cart').click()
-        time.sleep(3)
-        browser.element('.delete-many').click()
+        browser.element('.delete-many').should(be.visible).click()
         return self
 
     def assert_cart_is_empty(self, text):
