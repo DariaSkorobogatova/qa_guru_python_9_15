@@ -7,8 +7,9 @@ class MainPage:
         return self
 
     def change_city(self):
+        if browser.element('.change-city').wait_until(be.visible):
+            browser.element('.change-city__button--accept').click()
         browser.element('.header-city__title').click()
-        browser.element('.change-city').should(be.visible).click()
         browser.element('.change-city__button--cancel').click()
         return self
 
@@ -24,7 +25,9 @@ class MainPage:
         return self
 
     def click_catalog(self):
-        browser.element('.catalog__button-image').click()
+        if browser.element('.change-city').wait_until(be.visible):
+            browser.element('.change-city__button--accept').click()
+        browser.element('.catalog__button').should(be.visible).click()
         return self
 
 

@@ -13,11 +13,11 @@ class CartPage:
         return self
 
     def clear_cart(self):
-        # browser.element('.delete-many').should(be.visible).click()
-        browser.element('//span[contains(text(),"Очистить корзину")]').should(be.visible).click()
+        browser.element('.delete-many').should(be.visible).click()
         return self
 
     def assert_cart_is_empty(self, text):
+        browser.element('.cart-multiple-delete__actions').should(be.visible)
         browser.element('.cart-multiple-delete__title').should(
             have.text(text)
         )
