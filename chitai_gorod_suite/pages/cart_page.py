@@ -15,13 +15,12 @@ class CartPage:
         return self
 
     def clear_cart(self):
+        if browser.element('.change-city').wait_until(be.visible):
+            browser.element('.change-city__button--accept').click()
         browser.element('.delete-many').should(be.visible).click()
-        time.sleep(3)
         return self
 
     def assert_cart_is_empty(self, text):
-        if browser.element('.change-city').wait_until(be.visible):
-            browser.element('.change-city__button--accept').click()
         browser.element('.cart-multiple-delete__title').should(
             have.text(text)
         )
