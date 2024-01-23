@@ -17,8 +17,10 @@ def test_clear_cart():
         product.find_product('голодные игры и вспыхнет пламя')
         product.add_to_cart()
 
-    with allure.step('Clear the cart'):
+    with allure.step('Go to cart'):
         cart.go_to_cart()
+
+    with allure.step('Clear the cart'):
         cart.clear_cart()
 
     with allure.step('Assert cart is empty'):
