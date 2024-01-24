@@ -1,11 +1,9 @@
 import allure
-from chitai_gorod_suite.pages.main_page import MainPage
+from chitai_gorod_suite.pages.main_page import main_page
 
 
 @allure.title('Change city test')
 def test_change_city():
-    main_page = MainPage()
-
     with allure.step('Open main page'):
         main_page.open()
 

@@ -13,3 +13,6 @@ class CertificatePage:
 
     def should_have_titles(self, title1, title2):
         self.certificate_block_titles().should(have.texts(title1, title2))
+
+
+certificates = CertificatePage()
