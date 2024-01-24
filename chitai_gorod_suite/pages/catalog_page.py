@@ -13,3 +13,5 @@ class CatalogPage:
         )
         return self
 
+
+catalog = CatalogPage()

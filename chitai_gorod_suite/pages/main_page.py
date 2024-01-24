@@ -1,7 +1,7 @@
 from selene import browser, have, be
 
 
-class MainPage:
+class MainSitePage:
     def open(self):
         browser.open('/')
         return self
@@ -29,6 +29,10 @@ class MainPage:
             browser.element('.change-city__button--accept').click()
         browser.element('.catalog__button').should(be.visible).click()
         return self
+
+
+main_page = MainSitePage()
+
 
 
 

@@ -1,15 +1,11 @@
 import allure
-from chitai_gorod_suite.pages.main_page import MainPage
-from chitai_gorod_suite.pages.product_page import ProductPage
-from chitai_gorod_suite.pages.cart_page import CartPage
+from chitai_gorod_suite.pages.main_page import main_page
+from chitai_gorod_suite.pages.product_page import product
+from chitai_gorod_suite.pages.cart_page import cart
 
 
 @allure.title('Add item to cart')
 def test_add_product():
-    main_page = MainPage()
-    product = ProductPage()
-    cart = CartPage()
-
     with allure.step('Open main page'):
         main_page.open()
 

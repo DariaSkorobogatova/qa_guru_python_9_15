@@ -1,5 +1,4 @@
 from selene import browser, be
-import time
 
 
 class ProductPage:
@@ -15,4 +14,4 @@ class ProductPage:
         return self
 
 
-
+product = ProductPage()
