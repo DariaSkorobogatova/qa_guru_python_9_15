@@ -4,6 +4,7 @@ from selene import browser, have, be
 class MainSitePage:
     def open(self):
         browser.open('/')
+        browser.element('[class="button change-city__button change-city__button--accept blue"]').click()
         return self
 
     def change_city(self):
