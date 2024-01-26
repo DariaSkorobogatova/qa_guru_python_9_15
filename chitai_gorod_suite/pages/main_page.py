@@ -5,6 +5,7 @@ class MainSitePage:
     def open(self):
         browser.open('/')
         browser.element('[class="button change-city__button change-city__button--accept blue"]').click()
+        # я подумал, что эта плашка мешает
         return self
 
     def change_city(self):
