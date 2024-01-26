@@ -8,13 +8,13 @@ from chitai_gorod_suite.pages.cart_page import cart
 def test_clear_cart():
     with allure.step('Open main page'):
         main_page.open()
-        main_page.close_change_city_popup()
 
     with allure.step('Add item to cart'):
         product.find_product('голодные игры и вспыхнет пламя')
         product.add_to_cart()
 
     with allure.step('Go to cart'):
+        main_page.close_change_city_popup()
         cart.go_to_cart()
 
     with allure.step('Clear the cart'):
