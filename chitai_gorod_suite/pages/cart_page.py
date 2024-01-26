@@ -3,7 +3,6 @@ from selene import browser, have, be
 
 class CartPage:
     def go_to_cart(self):
-
         browser.element('.header-cart').click()
         return self
 
