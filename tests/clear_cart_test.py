@@ -20,8 +20,6 @@ def test_clear_cart():
     with allure.step('Clear the cart'):
         cart.clear_cart()
 
-    #with allure.step('Assert cart is empty'):
-        #cart.assert_cart_is_empty('Корзина очищена')
 
 
 
