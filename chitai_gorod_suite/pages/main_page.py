@@ -24,9 +24,12 @@ class MainSitePage:
         )
         return self
 
-    def click_catalog(self):
+    def close_change_city_popup(self):
         if browser.element('.change-city').wait_until(be.visible):
             browser.element('.change-city__button--accept').click()
+
+    def click_catalog(self):
+        self.close_change_city_popup()
         browser.element('.catalog__button').should(be.visible).click()
         return self
 

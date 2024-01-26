@@ -13,8 +13,6 @@ class CartPage:
         return self
 
     def clear_cart(self):
-        if browser.element('.change-city').wait_until(be.visible):
-            browser.element('.change-city__button--accept').click()
         browser.element('.app-title__append').should(be.visible)
         browser.element('.delete-many').click()
         return self
