@@ -14,8 +14,8 @@ def test_clear_cart():
         product.add_to_cart()
 
     with allure.step('Go to cart'):
-        main_page.close_change_city_popup()
         cart.go_to_cart()
+        main_page.close_change_city_popup()
 
     with allure.step('Clear the cart'):
         cart.clear_cart()
