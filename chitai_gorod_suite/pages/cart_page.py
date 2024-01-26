@@ -15,7 +15,7 @@ class CartPage:
     def clear_cart(self):
         browser.element('.products__items').should(be.visible)
         browser.element('.app-title__append').should(be.visible)
-        browser.element('.delete-many').click()
+        browser.element('.delete-many').should(be.clickable).click()
         return self
 
     def assert_cart_is_empty(self, text):
