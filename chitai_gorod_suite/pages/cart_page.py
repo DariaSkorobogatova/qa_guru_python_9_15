@@ -1,6 +1,5 @@
 from selene import browser, have, be, command
 
-
 class CartPage:
     def go_to_cart(self):
         browser.element('.header-cart').click()
@@ -13,10 +12,15 @@ class CartPage:
         return self
 
     def clear_cart(self):
-        browser.execute_script("document.body.style.zoom='30%'")
-        browser.element('.products__items').should(be.visible)
-        browser.element('.delete-many').perform(command.js.click)
-        return self
+        # [class="button change-city__button change-city__button--accept blue"]
+        # browser.execute_script("document.body.style.zoom='50%'")
+        # browser.element('.cart-page').should(be.visible)
+        # browser.element('.product-picture').should(be.visible)
+        browser.element('.delete-many').click()
+        # browser.element('.delete-many').scroll_into_view().click()
+
+
+
 
     def assert_cart_is_empty(self, text):
         browser.element('.cart-multiple-delete__title').should(
