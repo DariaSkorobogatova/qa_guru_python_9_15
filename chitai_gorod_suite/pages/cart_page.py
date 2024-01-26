@@ -13,6 +13,7 @@ class CartPage:
         return self
 
     def clear_cart(self):
+        browser.element('.products__items').should(be.visible)
         browser.element('.app-title__append').should(be.visible)
         browser.element('.delete-many').click()
         return self
