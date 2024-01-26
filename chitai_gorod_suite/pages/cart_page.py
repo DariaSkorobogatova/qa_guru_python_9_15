@@ -16,7 +16,7 @@ class CartPage:
         # browser.execute_script("document.body.style.zoom='50%'")
         # browser.element('.cart-page').should(be.visible)
         # browser.element('.product-picture').should(be.visible)
-        browser.element('.delete-many').click()
+        browser.element('.delete-many').should(be.clickable).click()
         # browser.element('.delete-many').scroll_into_view().click()
 
 
