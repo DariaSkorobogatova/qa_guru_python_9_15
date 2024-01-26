@@ -13,6 +13,7 @@ class CartPage:
         return self
 
     def clear_cart(self):
+        browser.execute_script("document.body.style.zoom='50%'")
         browser.element('.products__items').should(be.visible)
         browser.element('.delete-many').perform(command.js.click)
         return self
