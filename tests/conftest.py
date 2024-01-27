@@ -15,13 +15,6 @@ def load_env():
 
 @pytest.fixture(scope='function', autouse=True)
 def browser_configs():
-    # browser.config.base_url = 'https://www.chitai-gorod.ru'
-    # browser.config.timeout = 5.0
-    # options = webdriver.ChromeOptions()
-    # options.add_argument('--start-maximized')
-    # browser.config.driver_options = options
-    # yield
-    # browser.quit()
     browser.config.base_url = 'https://www.chitai-gorod.ru'
     config.window_width = 1920
     config.window_height = 1080

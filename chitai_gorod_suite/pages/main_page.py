@@ -5,12 +5,14 @@ class MainSitePage:
     def open(self):
         browser.open('/')
         browser.element('[class="button change-city__button change-city__button--accept blue"]').click()
-        # я подумал, что эта плашка мешает
         return self
 
-    def change_city(self):
+    def close_change_city_popup(self):
         if browser.element('.change-city').wait_until(be.visible):
             browser.element('.change-city__button--accept').click()
+
+    def change_city(self):
+        self.close_change_city_popup()
         browser.element('.header-city__title').click()
         browser.element('.change-city__button--cancel').click()
         return self
@@ -25,10 +27,6 @@ class MainSitePage:
             have.text(text)
         )
         return self
-
-    def close_change_city_popup(self):
-        if browser.element('.change-city').wait_until(be.visible):
-            browser.element('.change-city__button--accept').click()
 
     def click_catalog(self):
         self.close_change_city_popup()

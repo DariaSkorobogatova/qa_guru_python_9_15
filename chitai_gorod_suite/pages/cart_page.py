@@ -1,4 +1,5 @@
-from selene import browser, have, be, command
+from selene import browser, have, be
+
 
 class CartPage:
     def go_to_cart(self):
@@ -24,4 +25,3 @@ class CartPage:
 
 
 cart = CartPage()
-
