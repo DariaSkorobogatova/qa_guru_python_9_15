@@ -12,15 +12,9 @@ class CartPage:
         return self
 
     def clear_cart(self):
-        # [class="button change-city__button change-city__button--accept blue"]
-        # browser.execute_script("document.body.style.zoom='50%'")
-        # browser.element('.cart-page').should(be.visible)
-        # browser.element('.product-picture').should(be.visible)
-        browser.element('.delete-many').should(be.clickable).click()
-        # browser.element('.delete-many').scroll_into_view().click()
-
-
-
+        browser.element('.app-title__append').should(be.visible)
+        browser.element('.delete-many').click()
+        return self
 
     def assert_cart_is_empty(self, text):
         browser.element('.cart-multiple-delete__title').should(

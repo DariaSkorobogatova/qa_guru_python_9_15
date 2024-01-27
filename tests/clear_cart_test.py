@@ -20,12 +20,9 @@ def test_clear_cart():
     with allure.step('Clear the cart'):
         cart.clear_cart()
 
-    # with allure.step('Assert cart is empty'):
-    #    cart.assert_cart_is_empty('Корзина очищена')
-    # почему когда запушил закоментированный шаг, он все равно отображается в отчете?
-    # именно этот шаг тебе фейлит отчет, а не очистка корзины - она по отчету работает
-    # проверь репу - увидишь, о чем я говорю
-    # есть вероятность, что Jenkins не подтягивает новые изменения?
+    with allure.step('Assert cart is empty'):
+        cart.assert_cart_is_empty('Корзина очищена')
+
 
 
 
